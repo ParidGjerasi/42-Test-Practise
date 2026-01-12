@@ -1,7 +1,7 @@
-#include <unistd.h>
+#include <stdlib.h>
 char    *ft_strdup(char *src){
 
-    int i = 0;
+    int  i = 0;
     char *kak;
 
     while(src[i]){
@@ -10,14 +10,14 @@ char    *ft_strdup(char *src){
 
     kak = malloc(i+1);
 
-    if(kak == NULL)
+    if(kak ==NULL)
     return(NULL);
-
+    
     i=0;
     while(src[i]){
-        (kak[i]= src[i]);
+        kak[i] = src[i];
         i++;
     }
-    kak[i]= '\0';
+    kak[i] = '\0';
     return(kak);
 }
