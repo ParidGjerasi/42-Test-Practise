@@ -1,9 +1,8 @@
-typedef struct s_list
+typedef struct    s_list
 {
-    int             data;
-    struct s_list   *next;
-} t_list;
-
+    struct s_list *next;
+    void          *data;
+}                 t_list;
 
 t_list	*sort_list(t_list* lst, int (*cmp)(int, int)){
 
@@ -15,8 +14,8 @@ t_list	*sort_list(t_list* lst, int (*cmp)(int, int)){
 	return(NULL);
 
 	i = lst;
-
 	while(i){
+
 		j = i->next;
 
 	while(j){
@@ -26,9 +25,9 @@ t_list	*sort_list(t_list* lst, int (*cmp)(int, int)){
 			i->data = j->data;
 			j->data = merda;
 		}
-		j = j->next;
+		j= j->next;
 	}
-	i = i->next;
-}
+		i= i->next;
+	}
 	return(lst);
 }
