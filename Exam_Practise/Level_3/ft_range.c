@@ -1,21 +1,21 @@
 #include <stdlib.h>
 int     *ft_range(int start, int end){
 
-    int i =0;
+    int i = 0;
     int len = 0;
     int *rak;
 
     if(start<=end)
-        len = end - start+1;
+        len = end - start +1;
     else
         len = start -end +1;
-
-    rak = malloc(len* sizeof(int));
+    
+    rak = malloc(len*sizeof(int));
     if(!rak)
     return(NULL);
 
     while(i<len){
-        rak[i]=start;
+        rak[i]= start;
         i++;
 
     if(start<end)

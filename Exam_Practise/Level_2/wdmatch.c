@@ -1,22 +1,11 @@
-#include <unistd.h>
+#include "ft_list.h"
 
-int main(int ac , char*av[]){
+int	ft_list_size(t_list *begin_list){
 
     int i =0;
-    int j =0;
-
-    if(ac==2){
-
-        while(av[1][i]&&av[2][j])
+    while(begin_list){
+        begin_list = begin_list->next;
         i++;
-
-        if(av[1][i]==av[2][j]){
-            i++;
-        j++;
-        }
-
-        if(!av[1][i])
-        write(1, &av[1], i);
     }
-    write(1, "\n", 1);
+    return(i);
 }

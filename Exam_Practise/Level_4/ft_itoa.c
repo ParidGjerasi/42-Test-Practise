@@ -1,13 +1,12 @@
-#include <stdlib.h>
+#include <stdib.h>
 
 int merda(int nbr){
-
-	int i=0;
+	int i =0;
 
 	if(nbr<=0)
 		i++;
 	while(nbr!=0){
-		nbr = nbr/10;
+		nbr = nbr / 10;
 		i++;
 	}
 	return(i);
@@ -17,7 +16,7 @@ int merda(int nbr){
 char	*ft_itoa(int nbr){
 
 	int i;
-	long num;
+	long  num;
 	int len;
 	char *str;
 
@@ -29,14 +28,14 @@ char	*ft_itoa(int nbr){
 	str[len]='\0';
 	i = len-1;
 	if(num<0){
-		str[i]='-';
+		str[i]= '-';
 		num = -num;
 	}
 	while(num>9){
-		str[i]= num % 10 +'0';
-		num  = num/10;
+		str[i] = num %10 +'0';
+		num = num / 10;
 		i--;
 	}
-	str[i]=num+'0';
+	str[i] = num +'0';
 	return(str);
 }
