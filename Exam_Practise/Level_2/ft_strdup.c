@@ -1,9 +1,9 @@
 #include <stdlib.h>
 char    *ft_strdup(char *src){
 
-    int i = 0;
+    int i =0;
     char *kak;
-    
+
     i=0;
     while(src[i]){
         i++;
@@ -15,9 +15,9 @@ char    *ft_strdup(char *src){
 
     i=0;
     while(src[i]){
-        kak[i] = src[i];
+        kak[i] = str[i];
         i++;
     }
-    kak[i]='\0';
+    kak[i]= '\0';
     return(kak);
 }
